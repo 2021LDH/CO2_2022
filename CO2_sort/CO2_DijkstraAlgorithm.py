@@ -27,4 +27,4 @@ def Q1(): #5972번 택배 배송
         arr[b].append((a, c))
     cost = [100000000] * (n + 1)
     dijkstra(1)
-Q1()#
+Q1()
