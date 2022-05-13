@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CO2_baekjoon", "CO2_sort\CO2_baekjoon.pyproj", "{95BF16B2-A39D-4F9D-8819-AB1A49DE03BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95BF16B2-A39D-4F9D-8819-AB1A49DE03BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95BF16B2-A39D-4F9D-8819-AB1A49DE03BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AA41F15-5AAD-4FD6-BBE0-992880F602DC}
+	EndGlobalSection
+EndGlobal
