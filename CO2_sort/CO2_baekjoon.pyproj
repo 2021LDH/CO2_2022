@@ -5,7 +5,7 @@
     <ProjectGuid>95bf16b2-a39d-4f9d-8819-ab1a49de03bb</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>CO2_DijkstraAlgorithm.py</StartupFile>
+    <StartupFile>CO2_BruteForce.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,9 @@
     <Compile Include="CO2_BinarySearch.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CO2_BruteForce.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="CO2_DijkstraAlgorithm.py">
       <SubType>Code</SubType>
     </Compile>
@@ -32,6 +35,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="CO2_GreedyAlgorithm.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CO2_Recursive.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="CO2_sort.py" />
