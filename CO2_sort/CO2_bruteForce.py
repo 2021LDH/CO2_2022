@@ -54,7 +54,7 @@ def Q4():
     for i in range(row - 7):
         for j in range(col - 7):
             for k in range(8):
-                board[k][0:8] = given[i +k][j:j + 8]
+                board[k][0:8] = given[i + k][j:j + 8]
             
             case = [0, 0]
             #1행1열이 W인 경우
