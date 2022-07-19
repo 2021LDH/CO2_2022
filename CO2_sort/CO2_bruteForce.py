@@ -45,12 +45,12 @@ def Q3(): #7568번 덩치
 
 def Q4(): #1018번 체스판 다시 칠하기
     row, col = map(int, input().split())
-    given = [[0 for _ in range(row)] for _ in range(col)]
+    given = [[0 for _ in range(col)] for _ in range(row)]
     for i in range(row):
-        given[i][0:8] = input()
+        given[i][0:col] = input()
 
     board = [[0,0,0,0,0,0,0,0] for _ in range(8)]
-    needToBePainted = [[10 ** 6 for _ in range(col)] for _ in range(row)]
+    needToBePainted = [[10 ** 6 for _ in range(col - 7)] for _ in range(row - 7)]
     for i in range(row - 7):
         for j in range(col - 7):
             for k in range(8):
@@ -77,5 +77,10 @@ def Q4(): #1018번 체스판 다시 칠하기
                             case[1] += 1
             needToBePainted[i][j] = min(case[0], case[1])
             case = [0, 0]
-    print(min(needToBePainted)[0])
+    answer = 10 ** 6
+    for i in range(row - 7):
+        for j in range(col - 7):
+            if answer > needToBePainted[i][j]:
+                answer = needToBePainted[i][j]
+    print(answer)
 Q4()

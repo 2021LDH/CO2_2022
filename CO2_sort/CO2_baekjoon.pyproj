@@ -5,7 +5,7 @@
     <ProjectGuid>95bf16b2-a39d-4f9d-8819-ab1a49de03bb</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>CO2_Recursive.py</StartupFile>
+    <StartupFile>CO2_BruteForce.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
