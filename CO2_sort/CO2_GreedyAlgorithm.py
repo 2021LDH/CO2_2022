@@ -70,4 +70,3 @@ def Q5(): #13305번 주유소
         result += m * distance[i]
     
     print(result)
-Q5()

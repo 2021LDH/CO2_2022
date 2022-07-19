@@ -135,4 +135,3 @@ def Q4(): #14217번 그래프 탐색
         for i in range(1, n + 1):
             print(distance[i] ,end=" ")
         print()
-Q4()

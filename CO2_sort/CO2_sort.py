@@ -175,4 +175,3 @@ def Q10(): #18870번 좌표 압축
     result.sort(key = lambda x : x[1])
     for i in range(n):
         print(result[i][0], end = " ")
-Q10()

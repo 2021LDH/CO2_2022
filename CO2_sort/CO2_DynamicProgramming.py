@@ -26,4 +26,3 @@ def Q2(): #1010번 다리 놓기
 		a, b = map(int, input().split())
 		ans = math.factorial(b)/(math.factorial(b-a)*math.factorial(a))
 		print(int(ans))
-Q2()

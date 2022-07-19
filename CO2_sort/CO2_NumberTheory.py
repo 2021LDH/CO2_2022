@@ -140,4 +140,3 @@ def Q12():
             count += n
         return count
     print(min(countTwo(a) - countTwo(b) - countTwo(a - b), countFive(a) - countFive(b) - countFive(a - b)))
-Q10()

@@ -83,4 +83,27 @@ def Q4(): #1018번 체스판 다시 칠하기
             if answer > needToBePainted[i][j]:
                 answer = needToBePainted[i][j]
     print(answer)
-Q4()
+def Q5(): #1436번 영화감독 숌
+    n = int(input())
+    arr = set()
+    i = 0
+    while True:
+        i += 1
+        if (i - 666) % 1000 == 0:
+            arr.add(i)
+            if len(arr) == 10000: break
+        elif (i // 10 - 666) % 1000 == 0:
+            arr.add(i)
+            if len(arr) == 10000: break
+        elif (i // 100 - 666) % 1000 == 0:
+            arr.add(i)
+            if len(arr) == 10000: break
+        elif (i // 1000 - 666) % 1000 == 0:
+            arr.add(i)
+            if len(arr) == 10000: break
+        elif (i // 10000 - 666) % 1000 == 0:
+            arr.add(i)
+            if len(arr) == 10000: break
+        else: pass
+    arr = sorted(list(arr))
+    print(arr[n - 1])

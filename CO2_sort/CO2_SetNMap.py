@@ -79,4 +79,3 @@ def Q7(): #11478번 서로 다른 부분 문자열의 개수
         for j in range(i, len(arr)):
             result.add(arr[i:j + 1])
     print(len(result))
-Q7()

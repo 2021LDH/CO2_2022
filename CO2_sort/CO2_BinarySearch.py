@@ -155,4 +155,3 @@ def Q7(): #12015번 가장 긴 증가하는 부분 수열 2 아직 이해 못함
             stack[binary_search(i, 0, len(stack) - 1)] = i
     
     print(len(stack) - 1)
-Q7()
