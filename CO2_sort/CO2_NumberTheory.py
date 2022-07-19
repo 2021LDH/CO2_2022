@@ -89,8 +89,24 @@ def Q8(): #11051번 이항 계수 2
 
 #9번 #1010번 다리 놓기는 전에 다이나믹 프로그래밍에 있던 문제이므로 제외
 
-def Q10():
-    pass
+def Q10(): #9375번 패션왕 신해빈
+    t = int(input())
+
+    for i in range(t):
+        n = int(input())
+        clothes = {}
+        for j in range(n):
+            temp = list(input().split())
+            if temp[1] in clothes:
+                clothes[temp[1]].append(temp[0])
+            else:
+                clothes[temp[1]] = [temp[0]]
+
+        cnt = 1
+
+        for i in clothes:
+            cnt *= (len(clothes[i])+1)
+        print(cnt-1)
 
 def Q11():
     import math
@@ -124,4 +140,4 @@ def Q12():
             count += n
         return count
     print(min(countTwo(a) - countTwo(b) - countTwo(a - b), countFive(a) - countFive(b) - countFive(a - b)))
-Q12()
+Q10()

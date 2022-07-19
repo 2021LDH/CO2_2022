@@ -89,5 +89,15 @@ def Q4(): #2447번 별 찍기 - 10
     printResult(result)
 
 def Q5(): #11729번 하노이 탑 이동 순서
-    pass
-Q4()
+    n = int(input())
+
+    def hanoi(n, a, b, c):
+        if n == 1:
+            print(a, c)
+        else:
+            hanoi(n - 1, a, c, b)
+            print(a, c)
+            hanoi(n - 1, b, a, c)
+    print(2 ** n - 1)
+    hanoi(n, 1, 2, 3)
+Q5()

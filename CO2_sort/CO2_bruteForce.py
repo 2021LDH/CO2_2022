@@ -43,7 +43,7 @@ def Q3(): #7568번 덩치
         print(rank[i] + 1, end = ' ')
     print(rank[n - 1] + 1, end = '')
 
-def Q4():
+def Q4(): #1018번 체스판 다시 칠하기
     row, col = map(int, input().split())
     given = [[0 for _ in range(row)] for _ in range(col)]
     for i in range(row):
