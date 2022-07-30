@@ -188,4 +188,94 @@ def Q10(): #10844번 쉬운 계단 수
         position[i][8] = position[i - 1][7] + position[i - 1][9]
         position[i][9] = position[i - 1][8]
     print(sum(position[n]) % 1000000000)
-Q10()
+
+def Q11(): #2156번 포도주 시식
+    import sys
+    input = sys.stdin.readline
+
+    n = int(input())
+    arr = [0] * n
+    for i in range(n):
+        arr[i] = int(input())
+    if n == 1:
+        print(arr[0])
+    elif n == 2:
+        print(arr[0] + arr[1])
+    else:
+        sum = [0] * n
+        sum[0] = arr[0]
+        sum[1] = arr[0] + arr[1]
+        sum[2] = max(arr[1] + arr[2], arr[0] + arr[2], sum[1])
+        for i in range(3, n):
+            sum[i] = max(sum[i - 3] + arr[i - 1] + arr[i], sum[i - 2] + arr[i], sum[i - 1])
+        print(sum[n - 1])
+
+def Q12(): #11053번 가장 긴 증가하는 부분 수열
+    n = int(input())
+    arr = list(map(int, input().split()))
+    length = [0] * n
+    length[0] = 1
+    for i in range(1, n):
+        for j in range(i):
+            if arr[i] > arr[j] and length[i] < length[j]:
+                length[i] = length[j]
+        length[i] += 1
+    print(max(length))
+
+def Q13(): #11054번 가장 긴 바이토닉 부분 수열
+    n = int(input())
+    arr = list(map(int, input().split()))
+    upLen = [0] * n
+    downLen = [0] * n
+
+    upLen[0] = 1
+    for i in range(1, n):
+        for j in range(i):
+            if arr[i] > arr[j] and upLen[i] < upLen[j]:
+                upLen[i] = upLen[j]
+        upLen[i] += 1
+    downLen[n - 1] = 1
+    for i in range(n - 2, -1, -1):
+        for j in range(n - 1, i, -1):
+            if arr[i] > arr[j] and downLen[i] < downLen[j]:
+                downLen[i] = downLen[j]
+        downLen[i] += 1
+    totalLen = [0] * n
+    for i in range(n):
+        totalLen[i] = upLen[i] + downLen[i] - 1
+    print(max(totalLen))
+
+def Q14(): #2565번 전깃줄
+    import sys
+    input = sys.stdin.readline
+
+    n = int(input())
+    arr = [[0, 0] for _ in range(n)]
+    for i in range(n):
+        arr[i][0], arr[i][1] = map(int, input().split())
+    arr.sort()
+
+    L = [[0] for _ in range(n)]
+    for i in range(n):
+        L[i] = arr[i][1]
+
+    length = [0] * n
+    for i in range(n):
+        for j in range(i):
+            if L[i] > L[j] and length[i] < length[j]:
+                length[i] = length[j]
+        length[i] += 1
+    print(n - max(length))
+
+def Q15(): #9251번 LCS
+    a = input()
+    b = input()
+    length = [[0 for _ in range(len(b) + 1)] for _ in range(len(a) + 1)]
+    for i in range(len(a)):
+        for j in range(len(b)):
+            if a[i] == b[j]:
+                length[i + 1][j + 1] = length[i][j] + 1
+            else:
+                length[i + 1][j + 1] = max(length[i][j + 1], length[i + 1][j])
+    print(length[-1][-1])
+Q15()
