@@ -278,4 +278,27 @@ def Q15(): #9251번 LCS
             else:
                 length[i + 1][j + 1] = max(length[i][j + 1], length[i + 1][j])
     print(length[-1][-1])
-Q15()
+
+def Q16(): #12865번 평범한 배낭
+    import sys
+    input = sys.stdin.readline
+
+    n, k = map(int, input().split())
+    stuff = [[0,0] for _ in range(n + 1)]
+    knapsack = [[0 for _ in range(k + 1)] for _ in range(n + 1)]
+    
+    for i in range(n):
+        stuff[i + 1][0], stuff[i + 1][1] = map(int, input().split())
+    
+    for i in range(1, n + 1):
+        for j in range(1, k + 1):
+            weight = stuff[i][0] 
+            value = stuff[i][1]
+           
+            if j < weight:
+                knapsack[i][j] = knapsack[i - 1][j] #weight보다 작으면 위의 값을 그대로 가져온다
+            else:
+                knapsack[i][j] = max(value + knapsack[i - 1][j - weight], knapsack[i - 1][j])
+    
+    print(knapsack[n][k])
+Q16()
